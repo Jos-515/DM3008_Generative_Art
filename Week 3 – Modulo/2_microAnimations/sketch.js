@@ -5,9 +5,7 @@
  * -- Comment it again before running the next one
 */
 
-//i=0;function setup(){createCanvas(1200,900)}function draw(){for(j=0;j<99;)rect(i++%(1199-j++),int(i/99)%(999-j),i%12,j%16)}
-
-//s=900,i=j=0;function setup(){createCanvas(s,s);stroke(255,9);fill(9,3)}function draw(){quad(i++,j++,j,i,s-i,i-50,s-j,j);i=(i<<j%4)%1200;j=j%s}
+//i=0;function setup(){createCanvas(1200,900)}function draw(){for(j=0;j<99;)rect(i++%(1199-j++),int(i/99)%(999-j),i%12,j%16)}s=900,i=j=0;function setup(){createCanvas(s,s);stroke(255,9);fill(9,3)}function draw(){quad(i++,j++,j,i,s-i,i-50,s-j,j);i=(i<<j%4)%1200;j=j%s}
 
 //i=0,k=450;function setup(){createCanvas(900,900);textSize(k)}function draw(){translate(k,k);fill(i%1*k/2,60);rotate(i+=+.01);text("@",99,0)}
 
