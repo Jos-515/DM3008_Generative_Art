@@ -7,8 +7,8 @@
 
 var octaves = 8;
 var falloff = 0.5;
-var noiseScale = 0.05;
-var pixelScale = 4;
+var noiseScale = 5;
+var pixelScale = 5;
 
 function setup() {
   createCanvas(512, 512);
@@ -31,4 +31,6 @@ function draw() {
       rect(x * w, y * h, w, h);
     }
   }
+
+  
 }
