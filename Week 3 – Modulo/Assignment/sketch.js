@@ -1,4 +1,7 @@
-// microAnimation 6
+/* DM3008 Generative Art
+ * Week 3 - Modulo
+ * Assigment: Micro Animation 6
+*/
 
 c=512;
 
