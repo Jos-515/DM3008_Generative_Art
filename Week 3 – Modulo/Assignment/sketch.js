@@ -75,6 +75,7 @@ function draw(){
         // Constantly moving, evoking the feeling that it is building up to a create a bigger image, howevr that necer happems, after a dark abyss is created it all goes back to the begining.
     }
     pop();
+    // Pop and push are used to 
 }
 
 // I chose to focus on this microanimation as I liked the visual output it produced. 
