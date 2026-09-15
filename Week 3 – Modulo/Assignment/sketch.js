@@ -14,7 +14,7 @@ function setup() {
 
 function draw(){
 
-    push();
+    push(); 
     translate(c/2,c/2);
     ranslate(c/2,c/2);
     // This changes the position of the starting point to be the centre of the canvas. Ensuring that the rectangles begin there and not at the top left corner. 
@@ -32,9 +32,10 @@ function draw(){
 
         let d = Math.max(Math.abs(x), Math.abs(y)) % c;
         // The variable d represents the distance from the centre of the canvas to the current rectangle being drawn.
-        // For this variable, Math.max finds the maximum value  
+        // For this variable, Math.max finds the maximum value of the absolute values of x & y. Therefore calculating how far x & y are from 0, enabling the distance from the centre of the canvas to be calculated.
 
         let colour;
+        //Created a variable to store the colour value. 
 
         switch(true) {
             case (d < 64):
@@ -75,7 +76,8 @@ function draw(){
         // Constantly moving, evoking the feeling that it is building up to a create a bigger image, howevr that necer happems, after a dark abyss is created it all goes back to the begining.
     }
     pop();
-    // Pop and push are used to 
+    // Pop and push are used to ensure that any changes between them are not applied to the rest of the canvas. 
+    // Push is used to add the content to a stack whereas pop is used to removes it. This isolates the changes made. 
 }
 
 // I chose to focus on this microanimation as I liked the visual output it produced. 

@@ -30,12 +30,12 @@ function draw() {
   //  point(x,y);
   //}
 
-  //=== 3 - horizontal line ===
-  //for (var i = 0; i < 2000; i++) {
-  //  var x = random(0,width);
-  //  var y = random(height/2 - 20, height/2 + 20);
-  //  point(x,y);
-  //}
+  // === 3 - horizontal line ===
+  for (var i = 0; i < 2000; i++) {
+    var x = random(0,width);
+    var y = random(height/2 - 20, height/2 + 20);
+    point(x,y);
+  }
 
   //=== 4 - circle ===
   //translate(width / 2, height / 2);

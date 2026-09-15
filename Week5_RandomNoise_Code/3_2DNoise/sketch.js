@@ -8,7 +8,7 @@
 var octaves = 8;
 var falloff = 0.5;
 var noiseScale = 0.05;
-var pixelScale = 0.4;
+var pixelScale = 4;
 
 function setup() {
   createCanvas(512, 512);
@@ -24,9 +24,10 @@ function draw() {
   var numRows = height / pixelScale;
   var w = width / numCols;
   var h = height / numRows;
+
   for (var x = 0; x < numCols; x++) {
     for (var y = 0; y < numRows; y++) {
-      var noiseVal = noise(x * noiseScale, y * noiseScale);
+      var noiseVal = noise(x * noiseScale, y * noiseScale, frameCount * 0.05);
       fill(noiseVal * 255);
       rect(x * w, y * h, w, h);
     }
