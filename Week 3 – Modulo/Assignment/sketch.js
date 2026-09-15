@@ -84,6 +84,5 @@ function draw(){
 // As the layers overlap, star like shapes begin to form. It reminds me of the night sky, in a way making the loop feel like each time it resets a new day begins. 
 // This is due to the way the frameCount variable is used, as soon as it is less than 1, the whole function restarts. Appearling like the slate has been wiped clean.  
 
-
 // Additionally, to modify this, I wanted to add colour, influenced by the nature around me, i chose to work through a gradient of sage green.
 // This made the merging of the layers more pronounced, it felt like with each iteration the colours were building upon each other. 
