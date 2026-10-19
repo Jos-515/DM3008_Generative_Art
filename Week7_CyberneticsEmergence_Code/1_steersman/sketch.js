@@ -3,7 +3,16 @@
  * Steersman
  */
 
-let gain = 1.0;
+// Stance = Resonance (After Lucier)
+
+let feeding = true;
+
+// Press the space bar to stop and start the agents drawing
+function keyPressed() {
+  if (key === ' ') feeding = !feeding;
+}
+
+let gain = 3.0;
 let agents = [];
 
 function setup() {
@@ -36,9 +45,18 @@ function update(reading) {
 }
 
 function render() {
-  noStroke();
-  fill(20, 8); // Fade – how much the system forgets
-  rect(0, 0, width, height);
-  fill(240, 170, 50, 60);
-  agents.forEach((a) => circle(a.x, a.y, 3));
+  // Redraw the last frame, slightly larger: the loop
+  const prev = get();
+  push();
+  translate(width / 2, height / 2);
+  scale(1 + 0.005 * gain);
+  image(prev, -width / 2, -height / 2);
+  pop();
+  if (frameCount % 5 === 0) filter(BLUR, 1);   // a little is lost each time
+
+  if (feeding) {
+    noStroke();
+    fill(240, 170, 50, 60);
+    agents.forEach(a => circle(a.x, a.y, 3));
+  }
 }
