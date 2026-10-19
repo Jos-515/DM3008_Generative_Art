@@ -32,6 +32,7 @@ function draw() {
 function createRadialGradient(w, h, innerColor, outerColor) {
   var gfx = createGraphics(w, h);
   gfx.pixelDensity(1); 
+  gfx.loadPixels();
   var cx = w / 2;
   var cy = h / 2;
   var maxDist = dist(0, 0, cx, cy);
@@ -51,3 +52,4 @@ function createRadialGradient(w, h, innerColor, outerColor) {
   gfx.updatePixels();
   return gfx;
 }
+
